@@ -73,7 +73,7 @@ void listaTodas(Tarea **tareas, cadena usuario, FILE *F);
 int cantidadDeTareasPendientes(Tarea **tareas, cadena usuario);
 int cantidadDeTareasTerminadas(Tarea **tareas, cadena usuario);
 int cantidadDeTareas(Tarea **tareas, cadena usuario);
-void guardarCamios(Tarea **tareas);
+void guardarCambios(Tarea **tareas);
 int contiene(cadena cad, char c);
 
 // Funcionalidades principales
@@ -134,7 +134,7 @@ int main(void)
                 } while (c != '0' && c != '1' && c != '2');
                 switch (c) {
                 case GUARDAR_CAMBIOS:
-                    guardarCamios(&tareas);
+                    guardarCambios(&tareas);
                     return 0;
                 case DESCARTAR_CAMBIOS:
                     crearTarea = 0;
@@ -562,7 +562,7 @@ int cantidadDeTareas(Tarea **tareas, cadena usuario)
     return contador;
 }
 
-void guardarCamios(Tarea **tareas)
+void guardarCambios(Tarea **tareas)
 {
     FILE *F;
     F = fopen(FICHERO_PRINCIPAL, "w");
